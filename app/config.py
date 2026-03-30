@@ -8,7 +8,7 @@ load_dotenv()
 
 DATABASE_URL = os.getenv("DATABASE_URL")
 
-# Azure bazen URL'i düzgün parse edemiyor, fallback ekle
+
 if DATABASE_URL and not DATABASE_URL.startswith("postgresql+psycopg"):
     DATABASE_URL = DATABASE_URL.replace("postgresql://", "postgresql+psycopg://")
 

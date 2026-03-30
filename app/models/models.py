@@ -65,5 +65,5 @@ class Review(Base):
     comment = Column(Text)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
-    # İlişkiler
+ 
     booking = relationship("Booking", back_populates="review")

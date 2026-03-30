@@ -16,7 +16,7 @@ class APIGatewayMiddleware(BaseHTTPMiddleware):
         path = request.url.path
         method = request.method
 
-        # Rate Limiting: Query Listings gunluk 3 cagri
+  
         if path == "/api/v1/listings/" and method == "GET":
             today = str(date.today())
             current_count = self.rate_limit_store[client_ip][today]

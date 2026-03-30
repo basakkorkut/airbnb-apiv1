@@ -9,7 +9,7 @@ load_dotenv()
 SECRET_KEY = os.getenv("SECRET_KEY", "default-secret-key")
 ALGORITHM = os.getenv("ALGORITHM", "HS256")
 
-# Swagger'daki "Authorize" butonu bu URL'i kullanir
+
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="api/v1/auth/login")
 
 
